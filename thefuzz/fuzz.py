@@ -11,6 +11,7 @@ except ImportError:
 
 from . import utils
 
+# out = open("ratio.out", "w")
 
 ###########################
 # Basic Scoring Functions #
@@ -23,6 +24,7 @@ def ratio(s1, s2):
     s1, s2 = utils.make_type_consistent(s1, s2)
 
     m = SequenceMatcher(None, s1, s2)
+    # out.write(str(utils.intr(100 * m.ratio())))
     return utils.intr(100 * m.ratio())
 
 
